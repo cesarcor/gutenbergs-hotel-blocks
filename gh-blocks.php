@@ -15,24 +15,38 @@
  	exit;
  }
 
-define('GH_PLUGIN_VERSION', '0.0.1');
-
+define( 'GH_PLUGIN_VERSION', '0.0.1' );
 define( 'GH_BLOCKS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GH_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
+/**
+ * Register blocks
+ */
+function gh_register_block_type($blockName, $opts = array()){
+    register_block_type(
+        'gutenbergs-hotel-blocks/'.$blockName,
+        array_merge(array( 'editor_script' => 'gh-block-editor-script' ),
+        $opts
+     )
+    );
+}
+
+add_action( 'init', 'gh_enqueue_blocks' );
 function gh_enqueue_blocks(){
 
     wp_register_script(
-        'hero-block',
-         GH_BLOCKS_URL . 'dist/blocks.build.js',
-         array( 'wp-blocks', 'wp-element', 'wp-editor' )
-       );
+        'gh-block-editor-script',
+         GH_BLOCKS_URL . 'dist/editor.js',
+         array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' )
+    );
 
-   register_block_type( 'gutenbergs-hotel-blocks/hero-block', array(
-      'editor_script' => 'hero-block',
-   ) );
+    gh_register_block_type('hero-block');
+    gh_register_block_type('grid-block');
+    gh_register_block_type('carousel-block');
+    gh_register_block_type('form-block');
+    gh_register_block_type('image-showcase-block');
+
 }
-add_action( 'init', 'gh_enqueue_blocks' );
 
 
 add_filter('block_categories', function ($categories, $post) {
