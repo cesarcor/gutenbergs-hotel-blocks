@@ -1,8 +1,3 @@
-// import './styles/style.scss';
-// import './styles/editor.scss';
-
-// import Inspector from './components/inspector';
-
 const { Component } = wp.element;
 
 const { registerBlockType } = wp.blocks;
@@ -75,10 +70,10 @@ registerBlockType( 'gutenbergs-hotel-blocks/hero-block', {
     description: __( 'Add a Hero Section', 'gutenbergs-hotel' ),
     icon: 'format-gallery',
     category: 'gh-blocks',
-		keywords: [
-			__('Hero'),
-		  __('Slider')
-		],
+	keywords: [
+			__('Hero', 'gutenbergs-hotel-blocks'),
+		  	__('Slider', 'gutenbergs-hotel-blocks')
+	],
 
     attributes: heroBlockAttributes,
 
