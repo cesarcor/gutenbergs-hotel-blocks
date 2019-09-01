@@ -1,18 +1,46 @@
 {
   "name": "gutenbergs-hotel-blocks",
-  "version": "0.0.1",
-  "license": "GPL-2.0-or-later",
-  "main": "block.js",
-  "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "cross-env": "^5.0.1",
-    "webpack": "^3.1.0"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
-    "dev": "cross-env BABEL_ENV=default webpack --watch"
-  }
+    "start": "webpack --mode=development --watch",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesarcor/gutenbergs-hotel-blocks.git"
+  },
+  "author": "Cesar Correchel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cesarcor/gutenbergs-hotel-blocks/issues"
+  },
+  "homepage": "https://github.com/cesarcor/gutenbergs-hotel-blocks",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@wordpress/browserslist-config": "^2.3.0",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "browserslist": "^4.5.4",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ]
 }
