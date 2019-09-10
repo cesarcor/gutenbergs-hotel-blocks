@@ -7,7 +7,7 @@
  * Author URI: http://github.com/cesarcor
  * Version: 0.1
  *
- * @package gutenberg-hotel-blocks
+ * @package gutenbergs-hotel-blocks
  */
 
 
@@ -25,7 +25,11 @@ define( 'GH_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 function gh_register_block_type($blockName, $opts = array()){
     register_block_type(
         'gutenbergs-hotel-blocks/'.$blockName,
-        array_merge(array( 'editor_script' => 'gh-block-editor-script' ),
+        array_merge(
+            array( 
+                'editor_script' => 'gh-block-editor-script',
+                'editor_style' => 'gh-blocks-style'
+             ),
         $opts
      )
     );
@@ -40,12 +44,19 @@ function gh_enqueue_blocks(){
          array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' )
     );
 
+    wp_register_style(
+        'gh-blocks-style',
+        GH_BLOCKS_URL . 'dist/editor.css',
+        array('wp-edit-blocks')
+    );
+
     gh_register_block_type('hero-block');
     gh_register_block_type('grid-block');
     gh_register_block_type('carousel-block');
     gh_register_block_type('form-block');
     gh_register_block_type('image-showcase-block');
-
+    gh_register_block_type('features-block');
+    
 }
 
 
