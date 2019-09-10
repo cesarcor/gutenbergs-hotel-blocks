@@ -105,6 +105,58 @@ registerBlockType('gutenbergs-hotel-blocks/carousel-block', {
 
 /***/ }),
 
+/***/ "./src/blocks/features-block/index.js":
+/*!********************************************!*\
+  !*** ./src/blocks/features-block/index.js ***!
+  \********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _styles_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.editor.scss */ "./src/blocks/features-block/styles.editor.scss");
+/* harmony import */ var _styles_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/cesarcdowns/Local Sites/gutenbergs-hotel/app/public/wp-content/plugins/gutenbergs-hotel-blocks/src/blocks/features-block/index.js";
+
+var registerBlockType = wp.blocks.registerBlockType;
+var __ = wp.i18n.__;
+registerBlockType('gutenbergs-hotel-blocks/features-block', {
+  title: __('Features Block', 'gutenbergs-hotel-blocks'),
+  description: __('Features', 'gutenbergs-hotel-blocks'),
+  category: 'gh-blocks',
+  edit: function edit() {
+    return wp.element.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    });
+  },
+  save: function save() {
+    return wp.element.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/features-block/styles.editor.scss":
+/*!******************************************************!*\
+  !*** ./src/blocks/features-block/styles.editor.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./src/blocks/form-block/index.js":
 /*!****************************************!*\
   !*** ./src/blocks/form-block/index.js ***!
@@ -352,6 +404,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_carousel_block__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_blocks_carousel_block__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_form_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/form-block */ "./src/blocks/form-block/index.js");
 /* harmony import */ var _blocks_form_block__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_form_block__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _blocks_features_block__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/features-block */ "./src/blocks/features-block/index.js");
+
 
 
 
