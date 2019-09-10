@@ -124,14 +124,16 @@ registerBlockType('gutenbergs-hotel-blocks/features-block', {
   title: __('Features Block', 'gutenbergs-hotel-blocks'),
   description: __('Features', 'gutenbergs-hotel-blocks'),
   category: 'gh-blocks',
-  edit: function edit() {
+  edit: function edit(_ref) {
+    var className = _ref.className;
     return wp.element.createElement("div", {
+      className: className,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 11
       },
       __self: this
-    });
+    }, "This the features block");
   },
   save: function save() {
     return wp.element.createElement("div", {
@@ -140,7 +142,7 @@ registerBlockType('gutenbergs-hotel-blocks/features-block', {
         lineNumber: 14
       },
       __self: this
-    });
+    }, "This the features block");
   }
 });
 

@@ -9,9 +9,9 @@ module.exports =  (env, argv) => {
 		return argv.mode === 'development';
 	}
 	var config = {
-		entry: './src/editor.js',
+		entry: { editor: './src/editor.js', script: './src/script.js'},
 		output: {
-			filename: 'editor.js'
+			filename: '[name].js'
 		},
 		optimization: {
 			minimizer: [
@@ -32,7 +32,10 @@ module.exports =  (env, argv) => {
 		plugins: [
 			new CleanPlugin(),
 			new MiniCSSExtractPlugin({
-				filename: "editor.css"
+				chunkFilename: "[id].css",
+				filename: chunkData => {
+					return chunkData.chunk.name === 'script' ? 'style.css' : '[name]';
+				}
 			})
 		],
 		devtool: isDevelopment() ? 'cheap-module-source-map' : 'source-map',

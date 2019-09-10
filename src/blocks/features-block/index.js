@@ -7,10 +7,10 @@ registerBlockType('gutenbergs-hotel-blocks/features-block', {
     title: __('Features Block', 'gutenbergs-hotel-blocks'),
     description: __('Features', 'gutenbergs-hotel-blocks'),
     category: 'gh-blocks',
-    edit: function(){
-      return(<div></div>);
+    edit: ({ className }) => {
+      return(<div className = {className}>This the features block</div>);
     },
-    save: function(){
-        return(<div></div>);
+    save: () => {
+        return(<div>This the features block</div>);
     }
 });

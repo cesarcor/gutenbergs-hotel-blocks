@@ -28,7 +28,9 @@ function gh_register_block_type($blockName, $opts = array()){
         array_merge(
             array( 
                 'editor_script' => 'gh-block-editor-script',
-                'editor_style' => 'gh-blocks-style'
+                'editor_style' => 'gh-blocks-editor-style',
+                'script' => 'gh-blocks-script',
+                'style' => 'gh-blocks-style'
              ),
         $opts
      )
@@ -44,10 +46,22 @@ function gh_enqueue_blocks(){
          array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' )
     );
 
+    wp_register_script(
+        'gh-blocks-script',
+         GH_BLOCKS_URL . 'dist/script.js',
+         array('')
+    );
+
     wp_register_style(
-        'gh-blocks-style',
+        'gh-blocks-editor-style',
         GH_BLOCKS_URL . 'dist/editor.css',
         array('wp-edit-blocks')
+    );
+
+    wp_register_style(
+        'gh-blocks-style',
+        GH_BLOCKS_URL . 'dist/style.css',
+        array('')
     );
 
     gh_register_block_type('hero-block');
