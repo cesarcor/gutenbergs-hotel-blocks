@@ -48,6 +48,7 @@ function gh_enqueue_blocks(){
 
     wp_register_script(
         'gh-blocks-script',
+         plugins_url('dist/script.js', __FILE__),
          GH_BLOCKS_URL . 'dist/script.js',
          array('')
     );
@@ -60,8 +61,7 @@ function gh_enqueue_blocks(){
 
     wp_register_style(
         'gh-blocks-style',
-        GH_BLOCKS_URL . 'dist/style.css',
-        array('')
+        GH_BLOCKS_URL . 'dist/style.css'
     );
 
     gh_register_block_type('hero-block');
