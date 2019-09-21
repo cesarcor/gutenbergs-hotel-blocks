@@ -1,1 +1,1 @@
-{"version":3,"file":"style.css","sources":["webpack:///./src/blocks/features-block/style.scss"],"sourcesContent":["body {\n  background: red; }\n\n.wp-block-gutenbergs-hotel-blocks-features-block {\n  background-color: red; }\n"],"mappings":"AAAA;AACA;AACA;AACA;AACA;;","sourceRoot":""}
+{"version":3,"file":"style.css","sources":[],"mappings":";","sourceRoot":""}
