@@ -43,14 +43,13 @@ function gh_enqueue_blocks(){
     wp_register_script(
         'gh-block-editor-script',
          GH_BLOCKS_URL . 'dist/editor.js',
-         array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' )
+         array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n' )
     );
 
     wp_register_script(
         'gh-blocks-script',
-         plugins_url('dist/script.js', __FILE__),
          GH_BLOCKS_URL . 'dist/script.js',
-         array('')
+         array('jquery')
     );
 
     wp_register_style(
