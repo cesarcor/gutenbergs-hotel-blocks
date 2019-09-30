@@ -5,10 +5,10 @@ import { __ } from '@wordpress/i18n';
 import edit from './edit';
 
 const attributes = {
-  heading:{
+  title:{
     type: 'string',
     source: 'html',
-    selector: 'h2'
+    selector: 'h3'
   },
   content:{
     type: 'string',
@@ -23,21 +23,26 @@ registerBlockType('gutenbergs-hotel-blocks/features-block', {
     category: 'gh-blocks',
     attributes,
     edit,
-    save: () => {
+    save: ( {attributes} ) => {
       const {title, content} = attributes;
 
       return(
         <div>
+          {title &&
           <RichText.Content 
             className = {'wp-block-gutenbergs-hotel-blocks-feature-block__title'}
             tagName = 'h3'
             value = {title}
           />
+          }
+
+          {content &&
           <RichText.Content 
             className = {'wp-block-gutenbergs-hotel-blocks-feature-block__content'}
             tagName = 'p'
             value = {content}
           />
+          }
         </div>
       )
     }
