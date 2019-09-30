@@ -47962,10 +47962,10 @@ var _jsxFileName = "/Users/cesarcdowns/Local Sites/gutenbergs-hotel/app/public/w
 
 
 var attributes = {
-  heading: {
+  title: {
     type: 'string',
     source: 'html',
-    selector: 'h2'
+    selector: 'h3'
   },
   content: {
     type: 'string',
@@ -47979,7 +47979,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('gut
   category: 'gh-blocks',
   attributes: attributes,
   edit: _edit__WEBPACK_IMPORTED_MODULE_4__["default"],
-  save: function save() {
+  save: function save(_ref) {
+    var attributes = _ref.attributes;
     var title = attributes.title,
         content = attributes.content;
     return wp.element.createElement("div", {
@@ -47988,22 +47989,22 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('gut
         lineNumber: 30
       },
       __self: this
-    }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+    }, title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
       className: 'wp-block-gutenbergs-hotel-blocks-feature-block__title',
       tagName: "h3",
       value: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 32
       },
       __self: this
-    }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+    }), content && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
       className: 'wp-block-gutenbergs-hotel-blocks-feature-block__content',
       tagName: "p",
       value: content,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 40
       },
       __self: this
     }));
