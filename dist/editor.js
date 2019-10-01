@@ -47948,14 +47948,16 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.editor.scss */ "./src/blocks/features-block/styles.editor.scss");
 /* harmony import */ var _styles_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./edit */ "./src/blocks/features-block/edit.js");
+/* harmony import */ var _parent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parent */ "./src/blocks/features-block/parent.js");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./edit */ "./src/blocks/features-block/edit.js");
 var _jsxFileName = "/Users/cesarcdowns/Local Sites/gutenbergs-hotel/app/public/wp-content/plugins/gutenbergs-hotel-blocks/src/blocks/features-block/index.js";
+
 
 
 
@@ -47963,22 +47965,23 @@ var _jsxFileName = "/Users/cesarcdowns/Local Sites/gutenbergs-hotel/app/public/w
 
 var attributes = {
   title: {
-    type: 'string',
-    source: 'html',
-    selector: 'h3'
+    type: "string",
+    source: "html",
+    selector: "h3"
   },
   content: {
-    type: 'string',
-    source: 'html',
-    selector: 'p'
+    type: "string",
+    source: "html",
+    selector: "p"
   }
 };
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('gutenbergs-hotel-blocks/features-block', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Features Block', 'gutenbergs-hotel-blocks'),
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Features', 'gutenbergs-hotel-blocks'),
-  category: 'gh-blocks',
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gutenbergs-hotel-blocks/feature", {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Feature", "gutenbergs-hotel-blocks"),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Feature", "gutenbergs-hotel-blocks"),
+  category: "gh-blocks",
+  parent: ["gutenbergs-hotel-blocks/features"],
   attributes: attributes,
-  edit: _edit__WEBPACK_IMPORTED_MODULE_4__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_5__["default"],
   save: function save(_ref) {
     var attributes = _ref.attributes;
     var title = attributes.title,
@@ -47986,25 +47989,129 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('gut
     return wp.element.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 32
       },
       __self: this
-    }, title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
-      className: 'wp-block-gutenbergs-hotel-blocks-feature-block__title',
+    }, title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
+      className: "wp-block-gutenbergs-hotel-blocks-feature__title",
       tagName: "h3",
       value: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 34
       },
       __self: this
-    }), content && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
-      className: 'wp-block-gutenbergs-hotel-blocks-feature-block__content',
+    }), content && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
+      className: "wp-block-gutenbergs-hotel-blocks-feature__content",
       tagName: "p",
       value: content,
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }));
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/features-block/parent.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/features-block/parent.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/cesarcdowns/Local Sites/gutenbergs-hotel/app/public/wp-content/plugins/gutenbergs-hotel-blocks/src/blocks/features-block/parent.js";
+
+
+
+
+var attributes = {
+  columns: {
+    type: 'number',
+    default: 3
+  }
+};
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("gutenbergs-hotel-blocks/features", {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Features", "gutenbergs-hotel-blocks"),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Features", "gutenbergs-hotel-blocks"),
+  category: "gh-blocks",
+  attributes: attributes,
+  edit: function edit(_ref) {
+    var className = _ref.className,
+        attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var columns = attributes.columns;
+    return wp.element.createElement("div", {
+      className: "".concat(className, " has-").concat(columns, "-columns"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
+      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Columns", "gutenbergs-hotel-blocks"),
+      value: columns,
+      onChange: function onChange(columns) {
+        return setAttributes({
+          columns: columns
+        });
+      },
+      min: 3,
+      max: 6,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
+      allowedBlocks: ["gutenbergs-hotel-blocks/feature"],
+      template: [["gutenbergs-hotel-blocks/feature"], ["gutenbergs-hotel-blocks/feature"]],
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 40
+      },
+      __self: this
+    }));
+  },
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    var columns = attributes.columns;
+    return wp.element.createElement("div", {
+      className: "has-".concat(columns, "-columns"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
       },
       __self: this
     }));
@@ -48289,6 +48396,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 module.exports = wp["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = wp["components"];
 
 /***/ }),
 
