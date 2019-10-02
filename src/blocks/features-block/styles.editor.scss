@@ -1,0 +1,18 @@
+.wp-block-gutenbergs-hotel-blocks-features{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+
+    .editor-block-list__layout{
+        display: flex;
+
+        > [data-type=""]{
+            margin: 0;
+            padding: 10px;
+        }
+    }
+}
+
+.wp-block-gutenbergs-hotel-blocks-feature{
+    margin: 10px;
+}

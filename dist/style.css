@@ -1,3 +1,14 @@
+.wp-block-gutenbergs-hotel-blocks-features {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  margin: 0 auto; }
+  @media (max-width: 768px) {
+    .wp-block-gutenbergs-hotel-blocks-features {
+      flex-wrap: wrap; } }
+
+.wp-block-gutenbergs-hotel-blocks-feature {
+  margin: 10px; }
 
 
 /*# sourceMappingURL=style.css.map*/
