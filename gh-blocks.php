@@ -68,7 +68,7 @@ function gh_enqueue_blocks(){
     gh_register_block_type('carousel-block');
     gh_register_block_type('form-block');
     gh_register_block_type('image-showcase-block');
-    gh_register_block_type('features-block');
+    gh_register_block_type('feature');
     
 }
 
