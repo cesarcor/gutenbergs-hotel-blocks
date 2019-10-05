@@ -15,6 +15,23 @@ const attributes = {
     type: "string",
     source: "html",
     selector: "p"
+  },
+  id: {
+    type: "number"
+  },
+  alt: {
+    type: "string",
+    source: "attribute",
+    selector: "img",
+    attribute: "alt",
+    default: ""
+  },
+  url: {
+    type: "string",
+    source: "attribute",
+    selector: "img",
+    attribute: "src",
+    default: ""
   }
 };
 
@@ -23,6 +40,9 @@ registerBlockType("gutenbergs-hotel-blocks/feature", {
   description: __("Feature", "gutenbergs-hotel-blocks"),
   category: "gh-blocks",
   parent: ["gutenbergs-hotel-blocks/features"],
+  supports: {
+    reusable: false
+  },
   attributes,
   edit,
   save: ({ attributes }) => {
@@ -40,9 +60,7 @@ registerBlockType("gutenbergs-hotel-blocks/feature", {
 
         {content && (
           <RichText.Content
-            className={
-              "wp-block-gutenbergs-hotel-blocks-feature__content"
-            }
+            className={"wp-block-gutenbergs-hotel-blocks-feature__content"}
             tagName="p"
             value={content}
           />

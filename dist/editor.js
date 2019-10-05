@@ -47884,6 +47884,18 @@ function (_Component) {
       });
     };
 
+    _this.onSelectImage = function (_ref) {
+      var id = _ref.id,
+          alt = _ref.alt,
+          url = _ref.url;
+
+      _this.props.setAttributes({
+        id: id,
+        url: url,
+        alt: alt
+      });
+    };
+
     return _this;
   }
 
@@ -47894,16 +47906,36 @@ function (_Component) {
           className = _this$props.className,
           attributes = _this$props.attributes;
       var title = attributes.title,
-          content = attributes.content;
+          content = attributes.content,
+          id = attributes.id,
+          url = attributes.url,
+          alt = attributes.alt;
       return wp.element.createElement("div", {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 27
         },
         __self: this
-      }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
-        className: 'wp-block-gutenbergs-hotel-blocks-feature-block__title',
+      }, url ? wp.element.createElement("img", {
+        src: url,
+        alt: alt,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
+        icon: "format-image",
+        onSelect: this.onSelectImage,
+        accept: "image/*",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
+        className: "wp-block-gutenbergs-hotel-blocks-feature-block__title",
         tagName: "h3",
         onChange: this.onChangeTitle,
         value: title,
@@ -47911,11 +47943,11 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 38
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
-        className: 'wp-block-gutenbergs-hotel-blocks-feature-block__content',
+        className: "wp-block-gutenbergs-hotel-blocks-feature-block__content",
         tagName: "p",
         onChange: this.onChangeContent,
         placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Feature Content", "gutenbergs-hotel-blocks"),
@@ -47923,7 +47955,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 47
         },
         __self: this
       }));
@@ -47973,6 +48005,23 @@ var attributes = {
     type: "string",
     source: "html",
     selector: "p"
+  },
+  id: {
+    type: "number"
+  },
+  alt: {
+    type: "string",
+    source: "attribute",
+    selector: "img",
+    attribute: "alt",
+    default: ""
+  },
+  url: {
+    type: "string",
+    source: "attribute",
+    selector: "img",
+    attribute: "src",
+    default: ""
   }
 };
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gutenbergs-hotel-blocks/feature", {
@@ -47980,6 +48029,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])("Feature", "gutenbergs-hotel-blocks"),
   category: "gh-blocks",
   parent: ["gutenbergs-hotel-blocks/features"],
+  supports: {
+    reusable: false
+  },
   attributes: attributes,
   edit: _edit__WEBPACK_IMPORTED_MODULE_5__["default"],
   save: function save(_ref) {
@@ -47989,7 +48041,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
     return wp.element.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 52
       },
       __self: this
     }, title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
@@ -47998,7 +48050,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       value: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 54
       },
       __self: this
     }), content && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
@@ -48007,7 +48059,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       value: content,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 62
       },
       __self: this
     }));
