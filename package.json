@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode=development --watch",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production && gulp bundle"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,17 @@
   },
   "homepage": "https://github.com/cesarcor/gutenbergs-hotel-blocks",
   "dependencies": {
+    "@wordpress/blob": "^2.5.0",
+    "@wordpress/blocks": "^6.7.0",
+    "@wordpress/components": "^8.3.0",
+    "@wordpress/editor": "^9.7.0",
+    "@wordpress/i18n": "^3.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@wordpress/browserslist-config": "^2.3.0",
@@ -31,6 +37,8 @@
     "browserslist": "^4.5.4",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.0.0",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
