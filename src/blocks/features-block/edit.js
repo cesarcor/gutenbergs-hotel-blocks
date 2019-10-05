@@ -1,6 +1,8 @@
 import { Component } from "@wordpress/element";
 import { RichText, MediaPlaceholder } from "@wordpress/editor";
 import { __ } from "@wordpress/i18n";
+import { isBlobURL } from "@wordpress/blob";
+import { Spinner } from "@wordpress/components";
 
 class FeatureBlockEdit extends Component {
   onChangeTitle = title => {
@@ -26,7 +28,10 @@ class FeatureBlockEdit extends Component {
     return (
       <div className={className}>
         {url ?
-          <img src={url} alt={alt} />
+          <>
+            <img src={url} alt={alt} />
+            {isBlobURL(url) && <Spinner/>}
+          </>
          : 
           <MediaPlaceholder
             icon="format-image"
