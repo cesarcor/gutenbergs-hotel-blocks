@@ -47902,6 +47902,14 @@ function (_Component) {
       });
     };
 
+    _this.onSelectURL = function (url) {
+      _this.props.setAttributes({
+        url: url,
+        id: null,
+        alt: ""
+      });
+    };
+
     return _this;
   }
 
@@ -47920,7 +47928,7 @@ function (_Component) {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 37
         },
         __self: this
       }, url ? wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("img", {
@@ -47928,22 +47936,23 @@ function (_Component) {
         alt: alt,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 40
         },
         __self: this
       }), Object(_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__["isBlobURL"])(url) && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 41
         },
         __self: this
       })) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
         icon: "format-image",
         onSelect: this.onSelectImage,
+        onSelectURL: this.onSelectURL,
         accept: "image/*",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 44
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -47955,7 +47964,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 52
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -47967,7 +47976,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 61
         },
         __self: this
       }));

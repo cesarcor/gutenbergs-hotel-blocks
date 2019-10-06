@@ -21,24 +21,33 @@ class FeatureBlockEdit extends Component {
     });
   };
 
+  onSelectURL = (url) => {
+    this.props.setAttributes({
+      url,
+      id: null,
+      alt: ""
+    });
+  };
+
   render() {
     const { className, attributes } = this.props;
     const { title, content, id, url, alt } = attributes;
 
     return (
       <div className={className}>
-        {url ?
+        {url ? (
           <>
             <img src={url} alt={alt} />
-            {isBlobURL(url) && <Spinner/>}
+            {isBlobURL(url) && <Spinner />}
           </>
-         : 
+        ) : (
           <MediaPlaceholder
             icon="format-image"
             onSelect={this.onSelectImage}
+            onSelectURL={this.onSelectURL}
             accept="image/*"
           />
-        }
+        )}
 
         <RichText
           className={"wp-block-gutenbergs-hotel-blocks-feature-block__title"}
