@@ -47910,15 +47910,35 @@ function (_Component) {
       });
     };
 
+    _this.onUploadError = function (message) {
+      console.log(message);
+    };
+
     return _this;
   }
 
   _createClass(FeatureBlockEdit, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this$props = this.props,
+          attributes = _this$props.attributes,
+          setAttributes = _this$props.setAttributes;
+      var url = attributes.url,
+          id = attributes.id;
+
+      if (url && Object(_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__["isBlobURL"])(url) && !id) {
+        setAttributes({
+          url: "",
+          alt: ""
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          attributes = _this$props.attributes;
+      var _this$props2 = this.props,
+          className = _this$props2.className,
+          attributes = _this$props2.attributes;
       var title = attributes.title,
           content = attributes.content,
           id = attributes.id,
@@ -47928,7 +47948,7 @@ function (_Component) {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 53
         },
         __self: this
       }, url ? wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("img", {
@@ -47936,23 +47956,24 @@ function (_Component) {
         alt: alt,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 56
         },
         __self: this
       }), Object(_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__["isBlobURL"])(url) && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 57
         },
         __self: this
       })) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
         icon: "format-image",
         onSelect: this.onSelectImage,
         onSelectURL: this.onSelectURL,
+        onError: this.onUploadError,
         accept: "image/*",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 60
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -47964,7 +47985,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 69
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -47976,7 +47997,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 78
         },
         __self: this
       }));
@@ -48058,20 +48079,32 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
   save: function save(_ref) {
     var attributes = _ref.attributes;
     var title = attributes.title,
-        content = attributes.content;
+        content = attributes.content,
+        url = attributes.url,
+        alt = attributes.alt,
+        id = attributes.id;
     return wp.element.createElement("div", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 52
       },
       __self: this
-    }, title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
+    }, url && wp.element.createElement("img", {
+      src: url,
+      alt: alt,
+      className: id ? "wp-image-".concat(id) : null,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }), title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
       className: "wp-block-gutenbergs-hotel-blocks-feature__title",
       tagName: "h3",
       value: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 57
       },
       __self: this
     }), content && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
@@ -48080,7 +48113,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       value: content,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 65
       },
       __self: this
     }));

@@ -2,9 +2,21 @@ import { Component } from "@wordpress/element";
 import { RichText, MediaPlaceholder } from "@wordpress/editor";
 import { __ } from "@wordpress/i18n";
 import { isBlobURL } from "@wordpress/blob";
-import { Spinner } from "@wordpress/components";
+import { Spinner, withNotices } from "@wordpress/components";
 
 class FeatureBlockEdit extends Component {
+  componentDidMount() {
+    const { attributes, setAttributes } = this.props;
+    const { url, id } = attributes;
+
+    if (url && isBlobURL(url) && !id) {
+      setAttributes({
+        url: "",
+        alt: ""
+      });
+    }
+  }
+
   onChangeTitle = title => {
     this.props.setAttributes({ title });
   };
@@ -21,12 +33,16 @@ class FeatureBlockEdit extends Component {
     });
   };
 
-  onSelectURL = (url) => {
+  onSelectURL = url => {
     this.props.setAttributes({
       url,
       id: null,
       alt: ""
     });
+  };
+
+  onUploadError = message => {
+    console.log(message);
   };
 
   render() {
@@ -45,6 +61,7 @@ class FeatureBlockEdit extends Component {
             icon="format-image"
             onSelect={this.onSelectImage}
             onSelectURL={this.onSelectURL}
+            onError={this.onUploadError}
             accept="image/*"
           />
         )}
