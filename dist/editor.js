@@ -47914,6 +47914,14 @@ function (_Component) {
       console.log(message);
     };
 
+    _this.removeImage = function () {
+      _this.props.setAttributes({
+        id: null,
+        url: "",
+        alt: ""
+      });
+    };
+
     return _this;
   }
 
@@ -47944,11 +47952,60 @@ function (_Component) {
           id = attributes.id,
           url = attributes.url,
           alt = attributes.alt;
-      return wp.element.createElement("div", {
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["BlockControls"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }, url && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Toolbar"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75
+        },
+        __self: this
+      }, id && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUploadCheck"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUpload"], {
+        onSelect: this.onSelectImage,
+        allowedTypes: ['image'],
+        value: id,
+        render: function render(_ref2) {
+          var open = _ref2.open;
+          return wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
+            label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Edit Image", "gutenbergs-hotel-blocks"),
+            onClick: open,
+            icon: "edit",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 84
+            },
+            __self: this
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Remove Image", "gutenbergs-hotel-blocks"),
+        onClick: this.removeImage,
+        icon: "trash",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }))), wp.element.createElement("div", {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 104
         },
         __self: this
       }, url ? wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("img", {
@@ -47956,13 +48013,13 @@ function (_Component) {
         alt: alt,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 107
         },
         __self: this
       }), Object(_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__["isBlobURL"])(url) && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 108
         },
         __self: this
       })) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
@@ -47973,7 +48030,7 @@ function (_Component) {
         accept: "image/*",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 111
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -47985,7 +48042,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 120
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -47997,10 +48054,10 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 129
         },
         __self: this
-      }));
+      })));
     }
   }]);
 
