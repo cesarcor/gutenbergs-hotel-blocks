@@ -47797,6 +47797,64 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./src/blocks/booking-form-block/edit.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/booking-form-block/edit.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./src/blocks/booking-form-block/index.js":
+/*!************************************************!*\
+  !*** ./src/blocks/booking-form-block/index.js ***!
+  \************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _styles_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.editor.scss */ "./src/blocks/booking-form-block/styles.editor.scss");
+/* harmony import */ var _styles_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/blocks/booking-form-block/edit.js");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])('gutenberg-hotel-blocks/booking-form', {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Booking Form', 'gutenbergs-hotel-blocks'),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Booking form', 'gutenbergs-hotel-blocks'),
+  category: 'gh-blocks',
+  edit: edit,
+  save: function save() {}
+});
+
+/***/ }),
+
+/***/ "./src/blocks/booking-form-block/styles.editor.scss":
+/*!**********************************************************!*\
+  !*** ./src/blocks/booking-form-block/styles.editor.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./src/blocks/carousel-block/index.js":
 /*!********************************************!*\
   !*** ./src/blocks/carousel-block/index.js ***!
@@ -48376,43 +48434,43 @@ var _wp$components = wp.components,
     Toolbar = _wp$components.Toolbar;
 var heroBlockAttributes = {
   heroHeading: {
-    type: 'array',
-    source: 'children',
-    selector: 'h2'
+    type: "array",
+    source: "children",
+    selector: "h2"
   },
   heroText: {
-    type: 'array',
-    source: 'children',
-    selector: '.hero-text'
+    type: "array",
+    source: "children",
+    selector: ".hero-text"
   },
   heroText_color: {
-    type: 'string',
-    default: '#f22424'
+    type: "string",
+    default: "#f22424"
   },
   heroText_alignment: {
-    type: 'string'
+    type: "string"
   },
   button: {
-    type: 'string',
-    source: 'text'
+    type: "string",
+    source: "text"
   },
   backgroundImageURL: {
-    type: 'string',
-    source: 'attribute',
-    attribute: 'src',
-    selector: 'img',
-    default: 'http://localhost/hotel/wp-content/uploads/2018/12/210129.jpg'
+    type: "string",
+    source: "attribute",
+    attribute: "src",
+    selector: "img",
+    default: "http://localhost/hotel/wp-content/uploads/2018/12/210129.jpg"
   },
   backgroundImageID: {
-    type: 'number'
+    type: "number"
   }
 };
-registerBlockType('gutenbergs-hotel-blocks/hero-block', {
-  title: 'Hero Block',
-  description: __('Add a Hero Section', 'gutenbergs-hotel'),
-  icon: 'format-gallery',
-  category: 'gh-blocks',
-  keywords: [__('Hero', 'gutenbergs-hotel-blocks'), __('Slider', 'gutenbergs-hotel-blocks')],
+registerBlockType("gutenbergs-hotel-blocks/hero-block", {
+  title: "Hero Block",
+  description: __("Add a Hero Section", "gutenbergs-hotel"),
+  icon: "format-gallery",
+  category: "gh-blocks",
+  keywords: [__("Hero", "gutenbergs-hotel-blocks"), __("Slider", "gutenbergs-hotel-blocks")],
   attributes: heroBlockAttributes,
   edit: function edit(props, className, setAttributes) {
     var _props$attributes = props.attributes,
@@ -48426,12 +48484,12 @@ registerBlockType('gutenbergs-hotel-blocks/hero-block', {
       class: "wp-block-gutenbergs-hotel-hero-block",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 89
       },
       __self: this
     }, wp.element.createElement(RichText, {
       tagName: "h1",
-      placeholder: __('Hero Heading', 'gutenbergs-hotel'),
+      placeholder: __("Hero Heading", "gutenbergs-hotel"),
       keepPlaceholderOnFocus: true,
       value: heroHeading,
       className: "hero-title",
@@ -48442,12 +48500,12 @@ registerBlockType('gutenbergs-hotel-blocks/hero-block', {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 90
       },
       __self: this
     }), wp.element.createElement(RichText, {
       tagName: "p",
-      placeholder: __('Hero Text', 'gutenbergs-hotel'),
+      placeholder: __("Hero Text", "gutenbergs-hotel"),
       keepPlaceholderOnFocus: true,
       value: heroText,
       className: "hero-text",
@@ -48461,7 +48519,7 @@ registerBlockType('gutenbergs-hotel-blocks/hero-block', {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 99
       },
       __self: this
     }));
@@ -48478,7 +48536,7 @@ registerBlockType('gutenbergs-hotel-blocks/hero-block', {
       style: "background-image: url({backgroundImageURL})",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 123
       },
       __self: this
     }, wp.element.createElement(RichText.Content, {
@@ -48486,7 +48544,7 @@ registerBlockType('gutenbergs-hotel-blocks/hero-block', {
       value: heroHeading,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 124
       },
       __self: this
     }), wp.element.createElement(RichText.Content, {
@@ -48494,7 +48552,7 @@ registerBlockType('gutenbergs-hotel-blocks/hero-block', {
       value: heroText,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 126
       },
       __self: this
     }))];
@@ -48542,6 +48600,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_form_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/form-block */ "./src/blocks/form-block/index.js");
 /* harmony import */ var _blocks_form_block__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_blocks_form_block__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _blocks_features_block__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/features-block */ "./src/blocks/features-block/index.js");
+/* harmony import */ var _blocks_booking_form_block__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/booking-form-block */ "./src/blocks/booking-form-block/index.js");
+
 
 
 
