@@ -1,19 +1,18 @@
-import { Component } from "@wordpress/element";
+import { Component } from '@wordpress/element';
 import {
   RichText,
   MediaPlaceholder,
   BlockControls,
   MediaUpload,
   MediaUploadCheck
-} from "@wordpress/editor";
+} from '@wordpress/editor';
 import { __ } from "@wordpress/i18n";
 import { isBlobURL } from "@wordpress/blob";
 import {
   Spinner,
-  withNotices,
   Toolbar,
   IconButton
-} from "@wordpress/components";
+} from '@wordpress/components';
 
 class FeatureBlockEdit extends Component {
   componentDidMount() {
