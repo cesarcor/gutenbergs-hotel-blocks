@@ -16,6 +16,11 @@ const attributes = {
     source: "html",
     selector: "p"
   },
+  button_text:{
+    type: "string",
+    source: "html",
+    selector: "a"
+  },
   id: {
     type: "number"
   },

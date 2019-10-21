@@ -48112,6 +48112,7 @@ function (_Component) {
           attributes = _this$props2.attributes;
       var title = attributes.title,
           content = attributes.content,
+          button_text = attributes.button_text,
           id = attributes.id,
           url = attributes.url,
           alt = attributes.alt;
@@ -48220,6 +48221,16 @@ function (_Component) {
           lineNumber: 128
         },
         __self: this
+      }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
+        className: "wp-block-gutenbergs-hotel-blocks-feature-block__button",
+        tagName: "p",
+        placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Button Text", "gutenbergs-hotel-blocks"),
+        value: button_text,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
       })));
     }
   }]);
@@ -48268,6 +48279,11 @@ var attributes = {
     source: "html",
     selector: "p"
   },
+  button_text: {
+    type: "string",
+    source: "html",
+    selector: "a"
+  },
   id: {
     type: "number"
   },
@@ -48306,7 +48322,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
     return wp.element.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 57
       },
       __self: this
     }, url && wp.element.createElement("img", {
@@ -48315,7 +48331,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       className: id ? "wp-image-".concat(id) : null,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 59
       },
       __self: this
     }), title && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
@@ -48324,7 +48340,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       value: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 62
       },
       __self: this
     }), content && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
@@ -48333,7 +48349,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       value: content,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 70
       },
       __self: this
     }));

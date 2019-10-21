@@ -65,7 +65,7 @@ class FeatureBlockEdit extends Component {
 
   render() {
     const { className, attributes } = this.props;
-    const { title, content, id, url, alt } = attributes;
+    const { title, content, button_text, id, url, alt } = attributes;
 
     return (
       <>
@@ -131,10 +131,20 @@ class FeatureBlockEdit extends Component {
             }
             tagName="p"
             onChange={this.onChangeContent}
-            placeholder={__("Feature Content", "gutenbergs-hotel-blocks")}
+            placeholder={__("Feature Content/Description", "gutenbergs-hotel-blocks")}
             value={content}
             formattingControls={[]}
           />
+
+          <RichText
+              className={
+                "wp-block-gutenbergs-hotel-blocks-feature-block__button"
+              }
+              tagName="p"
+              placeholder={__("Button Text", "gutenbergs-hotel-blocks")}
+              value={button_text}
+            />
+
         </div>
       </>
     );
