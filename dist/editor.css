@@ -4,9 +4,9 @@
   margin-right: 0; }
   .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout {
     display: flex; }
-    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout > [data-type=""] {
-      margin: 0;
-      padding: 10px; }
+    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout .wp-block-gutenbergs-hotel-blocks-feature-block__title,
+    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout .wp-block-gutenbergs-hotel-blocks-feature-block__content {
+      text-align: center; }
 
 .wp-block-gutenbergs-hotel-blocks-feature {
   margin: 10px; }
