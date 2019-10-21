@@ -41,6 +41,7 @@ registerBlockType("gutenbergs-hotel-blocks/features", {
           allowedBlocks={["gutenbergs-hotel-blocks/feature"]}
           template={[
             ["gutenbergs-hotel-blocks/feature"],
+            ["gutenbergs-hotel-blocks/feature"],
             ["gutenbergs-hotel-blocks/feature"]
           ]}
         />

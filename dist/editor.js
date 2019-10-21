@@ -238,7 +238,7 @@ function _typeof(obj) {
 /*!***************************************************************!*\
   !*** ./node_modules/@wordpress/element/build-module/index.js ***!
   \***************************************************************/
-/*! exports provided: Children, cloneElement, Component, createContext, createElement, createRef, forwardRef, Fragment, isValidElement, memo, StrictMode, useCallback, useContext, useDebugValue, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useReducer, useRef, useState, lazy, Suspense, concatChildren, switchChildrenNodeName, createPortal, findDOMNode, render, unmountComponentAtNode, isEmptyElement, renderToString, RawHTML */
+/*! exports provided: renderToString, RawHTML, Children, cloneElement, Component, createContext, createElement, createRef, forwardRef, Fragment, isValidElement, memo, StrictMode, useCallback, useContext, useDebugValue, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useReducer, useRef, useState, lazy, Suspense, concatChildren, switchChildrenNodeName, createPortal, findDOMNode, render, unmountComponentAtNode, isEmptyElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47801,16 +47801,119 @@ module.exports = function(module) {
 /*!***********************************************!*\
   !*** ./src/blocks/booking-form-block/edit.js ***!
   \***********************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/cesarcdowns/Local Sites/gutenbergs-hotel/app/public/wp-content/plugins/gutenbergs-hotel-blocks/src/blocks/booking-form-block/edit.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
+
+
+
+
+var BookingFormEdit =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(BookingFormEdit, _Component);
+
+  function BookingFormEdit() {
+    _classCallCheck(this, BookingFormEdit);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(BookingFormEdit).apply(this, arguments));
+  }
+
+  _createClass(BookingFormEdit, [{
+    key: "render",
+    value: function render() {
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["InspectorControls"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Form Styles", "gutenbergs-hotel-blocks"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Form Type", "gutenbergs-hotel-blocks"))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Fields", "gutenbergs-hotel-blocks"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Field Type", "gutenbergs-hotel-blocks"), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Label Color", "gutenbergs-hotel-blocks"), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Field Color", "gutenbergs-hotel-blocks"))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Submit Button", "gutenbergs-hotel-blocks"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Button Color", "gutenbergs-hotel-blocks")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Button Radius", "gutenbergs-hotel-blocks")))));
+    }
+  }]);
+
+  return BookingFormEdit;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (BookingFormEdit);
 
 /***/ }),
 
@@ -47834,12 +47937,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])('gutenberg-hotel-blocks/booking-form', {
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])('gutenbergs-hotel-blocks/booking-form', {
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Booking Form', 'gutenbergs-hotel-blocks'),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])('Booking form', 'gutenbergs-hotel-blocks'),
   category: 'gh-blocks',
-  edit: edit,
-  save: function save() {}
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
+  save: function save() {
+    return wp.element.createElement(wp.element.Fragment, null);
+  }
 });
 
 /***/ }),
@@ -48013,19 +48118,19 @@ function (_Component) {
       return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["BlockControls"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 72
         },
         __self: this
       }, url && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Toolbar"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 74
         },
         __self: this
       }, id && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUploadCheck"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 76
         },
         __self: this
       }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUpload"], {
@@ -48040,14 +48145,14 @@ function (_Component) {
             icon: "edit",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 84
+              lineNumber: 83
             },
             __self: this
           });
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 77
         },
         __self: this
       })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
@@ -48056,14 +48161,14 @@ function (_Component) {
         icon: "trash",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 94
         },
         __self: this
       }))), wp.element.createElement("div", {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 103
         },
         __self: this
       }, url ? wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("img", {
@@ -48071,13 +48176,13 @@ function (_Component) {
         alt: alt,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 106
         },
         __self: this
       }), Object(_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__["isBlobURL"])(url) && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 107
         },
         __self: this
       })) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
@@ -48088,7 +48193,7 @@ function (_Component) {
         accept: "image/*",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 110
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -48100,7 +48205,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 119
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -48112,7 +48217,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 128
         },
         __self: this
       })));
@@ -48311,7 +48416,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("gut
       __self: this
     }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
       allowedBlocks: ["gutenbergs-hotel-blocks/feature"],
-      template: [["gutenbergs-hotel-blocks/feature"], ["gutenbergs-hotel-blocks/feature"]],
+      template: [["gutenbergs-hotel-blocks/feature"], ["gutenbergs-hotel-blocks/feature"], ["gutenbergs-hotel-blocks/feature"]],
       __source: {
         fileName: _jsxFileName,
         lineNumber: 40
@@ -48326,13 +48431,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("gut
       className: "has-".concat(columns, "-columns"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 56
       },
       __self: this
     }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
     }));
