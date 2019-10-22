@@ -1,0 +1,27 @@
+.wp-block-gutenbergs-hotel-blocks-features {
+  display: block;
+  margin-left: 0;
+  margin-right: 0; }
+  .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout {
+    display: flex; }
+    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout .wp-block-gutenbergs-hotel-blocks-feature-block__title,
+    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout .wp-block-gutenbergs-hotel-blocks-feature-block__content {
+      text-align: center;
+      font-size: 14px; }
+    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout .wp-block-gutenbergs-hotel-blocks-feature-block__content {
+      margin-bottom: 20px; }
+    .wp-block-gutenbergs-hotel-blocks-features .editor-block-list__layout .wp-block-gutenbergs-hotel-blocks-feature-block__button {
+      padding: 10px 20px;
+      background-color: #FFFFFF;
+      color: #C8553D;
+      background: #FFFFFF;
+      box-shadow: 0 2px 6px 1px rgba(200, 85, 61, 0.21);
+      border-radius: 3px;
+      text-align: center; }
+
+.wp-block-gutenbergs-hotel-blocks-feature {
+  margin: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05); }
+
+

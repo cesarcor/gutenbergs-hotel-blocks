@@ -48053,6 +48053,12 @@ function (_Component) {
       });
     };
 
+    _this.onChangeButtonText = function (button_text) {
+      _this.props.setAttributes({
+        button_text: button_text
+      });
+    };
+
     _this.onSelectImage = function (_ref) {
       var id = _ref.id,
           alt = _ref.alt,
@@ -48119,19 +48125,19 @@ function (_Component) {
       return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["BlockControls"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 76
         },
         __self: this
       }, url && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Toolbar"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 78
         },
         __self: this
       }, id && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUploadCheck"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 80
         },
         __self: this
       }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUpload"], {
@@ -48146,14 +48152,14 @@ function (_Component) {
             icon: "edit",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 83
+              lineNumber: 87
             },
             __self: this
           });
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 81
         },
         __self: this
       })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
@@ -48162,14 +48168,14 @@ function (_Component) {
         icon: "trash",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 98
         },
         __self: this
       }))), wp.element.createElement("div", {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 107
         },
         __self: this
       }, url ? wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("img", {
@@ -48177,13 +48183,13 @@ function (_Component) {
         alt: alt,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 110
         },
         __self: this
       }), Object(_wordpress_blob__WEBPACK_IMPORTED_MODULE_3__["isBlobURL"])(url) && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 111
         },
         __self: this
       })) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
@@ -48194,7 +48200,7 @@ function (_Component) {
         accept: "image/*",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 114
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -48206,7 +48212,7 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 123
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
@@ -48218,17 +48224,18 @@ function (_Component) {
         formattingControls: [],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 132
         },
         __self: this
       }), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["RichText"], {
         className: "wp-block-gutenbergs-hotel-blocks-feature-block__button",
         tagName: "p",
+        onChange: this.onChangeButtonText,
         placeholder: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Button Text", "gutenbergs-hotel-blocks"),
         value: button_text,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 143
         },
         __self: this
       })));
@@ -48316,6 +48323,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
     var attributes = _ref.attributes;
     var title = attributes.title,
         content = attributes.content,
+        button_text = attributes.button_text,
         url = attributes.url,
         alt = attributes.alt,
         id = attributes.id;
@@ -48350,6 +48358,15 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("gut
       __source: {
         fileName: _jsxFileName,
         lineNumber: 70
+      },
+      __self: this
+    }), button_text && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_3__["RichText"].Content, {
+      className: "wp-block-gutenbergs-hotel-blocks-feature__button",
+      tagName: "a",
+      value: button_text,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
       },
       __self: this
     }));

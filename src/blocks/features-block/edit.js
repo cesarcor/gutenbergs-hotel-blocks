@@ -35,6 +35,10 @@ class FeatureBlockEdit extends Component {
     this.props.setAttributes({ content });
   };
 
+  onChangeButtonText = button_text => {
+    this.props.setAttributes({ button_text });
+  };
+
   onSelectImage = ({ id, alt, url }) => {
     this.props.setAttributes({
       id,
@@ -141,6 +145,7 @@ class FeatureBlockEdit extends Component {
                 "wp-block-gutenbergs-hotel-blocks-feature-block__button"
               }
               tagName="p"
+              onChange={this.onChangeButtonText}
               placeholder={__("Button Text", "gutenbergs-hotel-blocks")}
               value={button_text}
             />

@@ -51,7 +51,7 @@ registerBlockType("gutenbergs-hotel-blocks/feature", {
   attributes,
   edit,
   save: ({ attributes }) => {
-    const { title, content, url, alt, id } = attributes;
+    const { title, content, button_text, url, alt, id } = attributes;
 
     return (
       <div>
@@ -71,6 +71,14 @@ registerBlockType("gutenbergs-hotel-blocks/feature", {
             className={"wp-block-gutenbergs-hotel-blocks-feature__content"}
             tagName="p"
             value={content}
+          />
+        )}
+
+        {button_text && (
+          <RichText.Content
+            className={"wp-block-gutenbergs-hotel-blocks-feature__button"}
+            tagName="a"
+            value={button_text}
           />
         )}
       </div>
